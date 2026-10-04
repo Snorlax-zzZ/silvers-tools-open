@@ -1,0 +1,22 @@
+# 操作系统 / 编辑器产物
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python 运行时缓存
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.pytest_cache/
+
+# Python 打包产物
+build/
+dist/
+*.egg-info/
+
+# 各类 CLI 工具的本地状态目录（属于本机状态，不是项目产物）
+.omc/
+.omo/

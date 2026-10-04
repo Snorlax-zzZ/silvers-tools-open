@@ -1,0 +1,36 @@
+{
+  "_comment": "把下面 allow 数组里的条目合并到 ~/.codex/settings.json 的 permissions.allow",
+  "permissions": {
+    "allow": [
+      "Read(~/.codex/checkpoints/**)",
+      "Write(~/.codex/checkpoints/**)",
+      "Edit(~/.codex/checkpoints/**)",
+      "Bash(mkdir -p ~/.codex/checkpoints/**)",
+      "Bash(ls ~/.codex/checkpoints/**)",
+      "Bash(ls -la ~/.codex/checkpoints/**)",
+      "Bash(find ~/.codex/checkpoints -name *.md)",
+      "Bash(find ~/.codex/checkpoints -maxdepth *:*)",
+      "Bash(head -n * ~/.codex/checkpoints/**)",
+      "Bash(grep * ~/.codex/checkpoints/**)",
+      "Bash(wc -l ~/.codex/checkpoints/**)",
+      "Bash(wc -c ~/.codex/checkpoints/**)",
+      "Bash(date *)",
+      "Bash(mv ~/.codex/checkpoints/** ~/.codex/checkpoints/**)",
+      "Bash(bash ~/.codex/scripts/list-checkpoints.sh*)",
+
+      "Read(~/.codex/checkpoints-online/**)",
+      "Write(~/.codex/checkpoints-online/**)",
+      "Edit(~/.codex/checkpoints-online/**)",
+      "Bash(mkdir -p ~/.codex/checkpoints-online/**)",
+      "Bash(ls ~/.codex/checkpoints-online/**)",
+      "Bash(ls -la ~/.codex/checkpoints-online/**)",
+      "Bash(find ~/.codex/checkpoints-online -name *.md)",
+      "Bash(find ~/.codex/checkpoints-online -maxdepth *:*)",
+      "Bash(head -n * ~/.codex/checkpoints-online/**)",
+      "Bash(grep * ~/.codex/checkpoints-online/**)",
+      "Bash(mv ~/.codex/checkpoints-online/** ~/.codex/checkpoints-online/**)",
+      "Bash(git clone <CHECKPOINT_REPO_URL> ~/.codex/checkpoints-online*)",
+      "Bash(git -C ~/.codex/checkpoints-online *)"
+    ]
+  }
+}

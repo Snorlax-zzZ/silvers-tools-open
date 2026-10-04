@@ -1,0 +1,35 @@
+{
+  "_comment": "把下面 allow 数组里的条目合并到 ~/.codex/settings.json 的 permissions.allow（Windows / PowerShell）",
+  "permissions": {
+    "allow": [
+      "Read(~/.codex/checkpoints/**)",
+      "Write(~/.codex/checkpoints/**)",
+      "Edit(~/.codex/checkpoints/**)",
+      "Bash(New-Item -ItemType Directory -Path ~/.codex/checkpoints/**)",
+      "Bash(Get-ChildItem ~/.codex/checkpoints/**)",
+      "Bash(Get-ChildItem -Recurse ~/.codex/checkpoints/**)",
+      "Bash(Get-Content -TotalCount * ~/.codex/checkpoints/**)",
+      "Bash(Select-String * ~/.codex/checkpoints/**)",
+      "Bash(date *)",
+      "Bash(Move-Item ~/.codex/checkpoints/** ~/.codex/checkpoints/**)",
+      "Bash(bash ~/.codex/scripts/list-checkpoints.sh*)",
+
+      "Read(~/.codex/checkpoints-online/**)",
+      "Write(~/.codex/checkpoints-online/**)",
+      "Edit(~/.codex/checkpoints-online/**)",
+      "Bash(mkdir -p ~/.codex/checkpoints-online/**)",
+      "Bash(ls ~/.codex/checkpoints-online/**)",
+      "Bash(head -n * ~/.codex/checkpoints-online/**)",
+      "Bash(grep * ~/.codex/checkpoints-online/**)",
+      "Bash(mv ~/.codex/checkpoints-online/** ~/.codex/checkpoints-online/**)",
+      "Bash(New-Item -ItemType Directory -Path ~/.codex/checkpoints-online/**)",
+      "Bash(Get-ChildItem ~/.codex/checkpoints-online/**)",
+      "Bash(Get-ChildItem -Recurse ~/.codex/checkpoints-online/**)",
+      "Bash(Get-Content -TotalCount * ~/.codex/checkpoints-online/**)",
+      "Bash(Select-String * ~/.codex/checkpoints-online/**)",
+      "Bash(Move-Item ~/.codex/checkpoints-online/** ~/.codex/checkpoints-online/**)",
+      "Bash(git clone <CHECKPOINT_REPO_URL> ~/.codex/checkpoints-online*)",
+      "Bash(git -C ~/.codex/checkpoints-online *)"
+    ]
+  }
+}

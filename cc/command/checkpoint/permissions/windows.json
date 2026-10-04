@@ -1,0 +1,35 @@
+{
+  "_comment": "把下面 allow 数组里的条目合并到 ~/.claude/settings.json 的 permissions.allow（Windows / PowerShell）",
+  "permissions": {
+    "allow": [
+      "Read(~/.claude/checkpoints/**)",
+      "Write(~/.claude/checkpoints/**)",
+      "Edit(~/.claude/checkpoints/**)",
+      "Bash(New-Item -ItemType Directory -Path ~/.claude/checkpoints/**)",
+      "Bash(Get-ChildItem ~/.claude/checkpoints/**)",
+      "Bash(Get-ChildItem -Recurse ~/.claude/checkpoints/**)",
+      "Bash(Get-Content -TotalCount * ~/.claude/checkpoints/**)",
+      "Bash(Select-String * ~/.claude/checkpoints/**)",
+      "Bash(date *)",
+      "Bash(Move-Item ~/.claude/checkpoints/** ~/.claude/checkpoints/**)",
+      "Bash(bash ~/.claude/scripts/list-checkpoints.sh*)",
+
+      "Read(~/.claude/checkpoints-online/**)",
+      "Write(~/.claude/checkpoints-online/**)",
+      "Edit(~/.claude/checkpoints-online/**)",
+      "Bash(mkdir -p ~/.claude/checkpoints-online/**)",
+      "Bash(ls ~/.claude/checkpoints-online/**)",
+      "Bash(head -n * ~/.claude/checkpoints-online/**)",
+      "Bash(grep * ~/.claude/checkpoints-online/**)",
+      "Bash(mv ~/.claude/checkpoints-online/** ~/.claude/checkpoints-online/**)",
+      "Bash(New-Item -ItemType Directory -Path ~/.claude/checkpoints-online/**)",
+      "Bash(Get-ChildItem ~/.claude/checkpoints-online/**)",
+      "Bash(Get-ChildItem -Recurse ~/.claude/checkpoints-online/**)",
+      "Bash(Get-Content -TotalCount * ~/.claude/checkpoints-online/**)",
+      "Bash(Select-String * ~/.claude/checkpoints-online/**)",
+      "Bash(Move-Item ~/.claude/checkpoints-online/** ~/.claude/checkpoints-online/**)",
+      "Bash(git clone <CHECKPOINT_REPO_URL> ~/.claude/checkpoints-online*)",
+      "Bash(git -C ~/.claude/checkpoints-online *)"
+    ]
+  }
+}
