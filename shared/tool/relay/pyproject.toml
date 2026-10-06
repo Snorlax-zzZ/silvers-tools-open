@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "silvers-relay"
+version = "0.9.1"
+description = "Deterministic bounded phase relay for long-running cross-model handoff"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.scripts]
+relay = "silvers_relay.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

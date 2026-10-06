@@ -9,6 +9,7 @@
 | 工具 | 用途 | 内容与安装入口 |
 |---|---|---|
 | Checkpoint | 保存任务状态，在新会话、另一台机器或另一个客户端中继续 | 本地、云端、公共接力三组命令；见下方 [Checkpoint](#checkpoint) |
+| Relay 接力棒 | 按阶段在不同会话、模型和机器之间交接任务，保留决策、完成标准与证据 | [入门与机制](shared/tool/relay/README.md)、[统一安装说明](shared/command/relay/README.md)、[三个共享 skill](shared/skill/README.md) |
 
 ## 目录组织
 
@@ -89,6 +90,16 @@ shared/   跨客户端共享的工具、协议和安装模板
 安装并确认当前客户端能发现入口后，显式调用存档、加载或完成归档命令。
 加载首先报告恢复位置、下一步和风险，是否继续动手遵循对应协议及用户授权。
 存档前应核对真实内容，移除 token、密码、Cookie、私钥等敏感值，避免保存完整聊天记录和大段源码。
+
+## Relay 接力棒
+
+Relay 包含一套 Python CLI、稳定 launcher、三个共享 skill 参考源以及统一安装/升级手册。
+模型负责整理和理解任务，CLI 负责结构校验、revision 冲突检查、独立 Git 存储和同步。
+日常只需交棒 `relay`、接棒 `relay-load`、收棒 `relay-done` 三个原生入口，具体调用形式由客户端安装适配决定。
+
+先阅读 [Relay 入门](shared/tool/relay/README.md#第一次使用从这里开始)，再让当前客户端的助手按
+[统一安装说明](shared/command/relay/README.md) 识别环境并安装。需要 Python 3.11+、Git 和自己创建的独立 Relay 数据仓库；同机各客户端共用 runtime，各自安装入口。
+存储仓库中包含任务正文与元数据，建议保持私有；它与本工具仓库、业务项目及 Checkpoint 数据仓库分别管理。
 
 ## 贡献
 

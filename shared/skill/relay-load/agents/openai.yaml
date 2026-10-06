@@ -1,0 +1,6 @@
+interface:
+  display_name: "Relay · 接棒"
+  short_description: "加载行动卡和增量，按需回忆历史并完成理解回执"
+  default_prompt: "使用 $relay-load 加载当前项目的接力任务并完成理解回执。"
+policy:
+  allow_implicit_invocation: false

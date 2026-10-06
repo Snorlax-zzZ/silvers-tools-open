@@ -1,0 +1,6 @@
+interface:
+  display_name: "Relay · 收棒"
+  short_description: "核验阶段完成标准与证据，安全归档接力文件对"
+  default_prompt: "使用 $relay-done 核验并归档当前接力任务。"
+policy:
+  allow_implicit_invocation: false

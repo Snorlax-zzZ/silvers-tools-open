@@ -1,0 +1,6 @@
+interface:
+  display_name: "Relay · 交棒"
+  short_description: "保存阶段契约、活动决策与下一步，安全交给下一模型继续"
+  default_prompt: "使用 $relay 保存或更新当前任务，并交给下一模型。"
+policy:
+  allow_implicit_invocation: false
